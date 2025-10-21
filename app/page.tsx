@@ -42,6 +42,23 @@ export default function Home() {
     setTimezone(userTimezone)
   }, [])
 
+  const [debouncedBgColor, setDebouncedBgColor] = useState(bgColor)
+  const [debouncedTextColor, setDebouncedTextColor] = useState(textColor)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebouncedBgColor(bgColor)
+    }, 150)
+    return () => clearTimeout(timer)
+  }, [bgColor])
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebouncedTextColor(textColor)
+    }, 150)
+    return () => clearTimeout(timer)
+  }, [textColor])
+
   const generateUrl = () => {
     const params = new URLSearchParams({
       type: widgetType,
@@ -65,7 +82,9 @@ export default function Home() {
       padding,
     })
 
-    const url = `https://api.aestheticnotion.io/render?${params.toString()}`
+    // Use window.location.origin for dynamic URL generation
+    const baseUrl = typeof window !== "undefined" ? window.location.origin : "https://aestheticnotion.io"
+    const url = `${baseUrl}/api/render?${params.toString()}`
     setGeneratedUrl(url)
   }
 
@@ -362,8 +381,8 @@ export default function Home() {
                   forecast={forecast}
                   eventName={eventName}
                   eventDate={eventDate}
-                  bgColor={isTransparent ? "transparent" : bgColor}
-                  textColor={textColor}
+                  bgColor={isTransparent ? "transparent" : debouncedBgColor}
+                  textColor={debouncedTextColor}
                   fontStyle={fontStyle}
                   padding={padding}
                 />
