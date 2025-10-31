@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "AestheticNotion.io - Free Notion Widget Creator",
   description:
     "Create beautiful, customizable widgets for your Notion pages. Clock, weather, and countdown widgets with live preview.",
-  generator: "v0.app",
+  generator: "CumaKaradash",
 }
 
 export default function RootLayout({
