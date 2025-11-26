@@ -175,7 +175,3 @@ Bu proje açık kaynaklıdır ve [MIT Lisansı](LICENSE) altında mevcuttur.
 ## Destek
 
 Destek için lütfen GitHub deposunda bir issue açın veya web sitesi üzerinden bizimle iletişime geçin.
-
----
-
-Made with ❤️ by Cumakaradash for Notion community
