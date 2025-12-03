@@ -171,7 +171,3 @@ Bu proje açık kaynaklıdır ve [MIT Lisansı](LICENSE) altında mevcuttur.
 - UI bileşenleri [Radix UI](https://www.radix-ui.com/) kullanılmıştır
 - İkonlar [Lucide](https://lucide.dev/) kütüphanesinden alınmıştır
 - [Tailwind CSS](https://tailwindcss.com/) ile stillendirilmiştir
-
-## Destek
-
-Destek için lütfen GitHub deposunda bir issue açın veya web sitesi üzerinden bizimle iletişime geçin.
